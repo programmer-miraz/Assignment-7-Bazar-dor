@@ -5,6 +5,7 @@ import Navber from "../components/Navber";
 import Nav_Link from "../components/Nav_Link";
 import { Suspense } from "react";
 import Marquee from "../components/Marquee";
+import Footer from "../components/Footer";
 
 const notoSerifBangli = Noto_Serif_Bengali({
   variable: "--font-geist-sans",
@@ -30,11 +31,10 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </Suspense> */}
         <Nav_Link />
         <Marquee></Marquee>
-
-
         <main>
           {children}
         </main>
+        <Footer></Footer>
       </body>
     </html>
   );
