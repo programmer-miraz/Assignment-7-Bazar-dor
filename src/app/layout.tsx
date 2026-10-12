@@ -31,7 +31,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         </Suspense> */}
         <Nav_Link />
         <Marquee></Marquee>
-        <main>
+        <main className="flex-1">
           {children}
         </main>
         <Footer></Footer>

@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import React from 'react';
 interface ItemType {
     nameBn: string
@@ -17,13 +18,14 @@ const Nav_Link = async () => {
                 <div className="flex w-max min-w-full  items-center gap-5 sm:gap-8">
 
                     {data.map((item: ItemType, ind: number) => (
-                        <button
-                            key={ind}
-                            className=" flex shrink-0 cursor-pointer rounded p-1 items-center gap-2 whitespace-nowrap  hover:bg-gray-100"
-                        >
-                            {item.icon}
-                            {item.nameBn}
-                        </button>
+                        <Link key={ind} href={`/category/${item.id}`}>
+                            <button
+                                className="flex mt-0.5 mb-0.5 shrink-0 cursor-pointer items-center gap-1 whitespace-nowrap rounded-lg border border-gray-200 bg-white px-2 py-1 text-gray-700 shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:border-green-300 hover:bg-green-50 hover:shadow-md">
+                                {item.icon}
+                                {item.nameBn}
+                            </button>
+                        </Link>
+
                     ))}
 
                 </div>

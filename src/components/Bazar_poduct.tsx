@@ -26,7 +26,7 @@ const Baza_poduct = async () => {
         <div className='container mx-auto mt-8'>
 
             <div>
-                <h1 className='text-xl font-bold mb-3 lg:px-0 px-3'> <span className=' text-red-600'>▲</span>আজ দাম বেড়েছে</h1>
+                <h1 className='text-xl font-bold mb-3 lg:px-0 px-3'> <span className=' text-red-600 '>▲</span>আজ দাম বেড়েছে</h1>
 
                 <div className='grid lg:px-0 px-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3.5'>
                     {increeseItem.map((item: IProductType) =>
@@ -34,7 +34,7 @@ const Baza_poduct = async () => {
                             key={item.id}
                             className="rounded-2xl border border-gray-200 bg-white p-4 hover:shadow-md hover:-translate-y-1 transition-all duration-200  hover:border-gray-300  hover:border-sm"
                         >
-                            <Link href={`/Details/${item.id}`}>
+                            <Link href={`/details/${item.id}`}>
                                 <div className="flex items-center justify-between gap-3 cursor-pointer">
 
 
@@ -57,8 +57,8 @@ const Baza_poduct = async () => {
 
                                     <div
                                         className={`shrink - 0 rounded - full px - 3 py - 1 text - xs font - medium ${item.change.dir === "up"
-                                            ? "bg-red-50 text-red-600"
-                                            : "bg-green-50 text-green-600"
+                                            ? "bg-red-50 rounded-xl px-1 py-0.5 text-red-600"
+                                            : "bg-green-50 rounded-xl px-1 py-0.5 text-green-600"
                                             }`}
                                     >
                                         <span>
@@ -93,7 +93,7 @@ const Baza_poduct = async () => {
                             key={item.id}
                             className="rounded-2xl border border-gray-200 bg-white p-4 hover:shadow-md hover:-translate-y-1 transition-all duration-200  hover:border-gray-300  hover:border-sm"
                         >
-                            <Link href={`/Details/${item.id}`}>
+                            <Link href={`/details/${item.id}`}>
                                 <div className="flex items-center justify-between gap-3 cursor-pointer">
 
 
@@ -116,8 +116,8 @@ const Baza_poduct = async () => {
 
                                     <div
                                         className={`shrink - 0 rounded - full px - 3 py - 1 text - xs font - medium ${item.change.dir === "down"
-                                            ? "bg-red-50 text-red-600"
-                                            : "bg-green-50 text-green-600"
+                                            ? "bg-red-50 rounded-xl px-1 py-0.5 text-red-600"
+                                            : "bg-green-50 rounded-xl px-1 py-0.5 text-green-600"
                                             }`}
                                     >
                                         <span>
