@@ -76,14 +76,14 @@ const UseInfo = () => {
             ) : (
                 <div className="flex gap-4">
                     <Link href='/signin'>
-                        <button className="btn border-none font-bold bg-white">
+                        <button className="btn whitespace-nowrap border-none font-bold bg-white">
 
                             সাইন ইন
                         </button>
                     </Link>
 
                     <Link href="/signup">
-                        <button className="btn bg-[#05893E] font-bold text-white">
+                        <button className="btn bg-[#05893E] font-bold whitespace-nowrap text-white">
                             সাইন আপ
                         </button>
                     </Link>

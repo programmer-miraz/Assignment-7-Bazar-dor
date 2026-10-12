@@ -24,7 +24,7 @@ const Marquee = async () => {
     return (
         <>
             <div className=' flex border-y border-gray-300 bg-white'>
-                <MarqueeText direction='right' duration={10} >
+                <MarqueeText direction='right' duration={8} >
                     {
                         data.map((item: IProduct, ind: number) =>
                             <div key={ind} className='flex items-center gap-2 h-10 whitespace-nowrap  border-l border-gray-300 px-6'>

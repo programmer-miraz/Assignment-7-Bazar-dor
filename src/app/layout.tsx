@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Noto_Serif_Bengali } from "next/font/google";
+import {Noto_Serif_Bengali } from "next/font/google";
 import "./globals.css";
 import Navber from "../components/Navber";
 import Nav_Link from "../components/Nav_Link";
-import { Suspense } from "react";
 import Marquee from "../components/Marquee";
 import Footer from "../components/Footer";
 import { ToastContainer } from "react-toastify";

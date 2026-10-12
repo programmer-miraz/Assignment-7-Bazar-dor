@@ -23,12 +23,12 @@ const signIn = () => {
         }
     }
     const handlegooglesignin = async () => {
-        const { data, error } = await authClient.signIn.social({
+       await authClient.signIn.social({
             provider: 'google'
         })
     }
     const handlegithubsignin = async () => {
-        const { data, error } = await authClient.signIn.social({
+        await authClient.signIn.social({
             provider: 'github'
         })
     }
@@ -58,8 +58,8 @@ const signIn = () => {
                             সাইন ইন
                         </button>
 
-                        <div className="flex items-center gap-4 py-1"> <div className="h-[2px] flex-1 bg-[#E3E9E4]" />
-                            <span className="text-sm text-[#657168]">অথবা</span> <div className="h-[2px] flex-1 bg-[#E3E9E4]" /> </div>
+                        <div className="flex items-center gap-4 py-1"> <div className="h-0.5 flex-1 bg-[#E3E9E4]" />
+                            <span className="text-sm text-[#657168]">অথবা</span> <div className="h-0.5 flex-1 bg-[#E3E9E4]" /> </div>
 
 
 
