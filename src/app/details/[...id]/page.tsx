@@ -26,7 +26,7 @@ interface IMarket {
 }
 
 export const instant = false;
-const page = async ({ params }: { params: Promise<{ id: string}> }) => {
+const DetailsPage = async ({ params }: { params: Promise<{ id: string}> }) => {
     const { id } = await params;
     const res = await fetch(`https://openapi.programming-hero.com/api/bazardor/products/${id}`)
 
@@ -216,4 +216,4 @@ const page = async ({ params }: { params: Promise<{ id: string}> }) => {
     );
 };
 
-export default page;
+export default DetailsPage;

@@ -1,30 +1,40 @@
 
 const Loading = () => {
     return (
-        <div className="flex min-h-screen flex-col items-center justify-center bg-[#F3F7F4]">
-            <div className="flex h-20 w-20 items-center justify-center rounded-3xl bg-[#05893E] shadow-lg shadow-green-200">
-                <span className="text-4xl">🛒</span>
+
+        <div className="flex min-h-screen flex-col items-center justify-center bg-white px-4">
+
+            {/* Loading Icon */}
+            <div className="relative flex h-24 w-24 items-center justify-center">
+                <div className="absolute inset-0 animate-spin rounded-full border-4 border-green-100 border-t-[#05893E]"></div>
+
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-[#05893E] shadow-md">
+                    <span className="text-3xl">🛒</span>
+                </div>
             </div>
 
-            <h1 className="mt-5 text-2xl font-extrabold text-[#05893E]">
+            {/* Title */}
+            <h1 className="mt-6 text-2xl font-extrabold tracking-wide text-[#05893E]">
                 বাজার দর
             </h1>
 
             <p className="mt-2 text-sm text-gray-500">
-                বাজারদরের তথ্য লোড হচ্ছে...
+                আপনার বাজারের তথ্য প্রস্তুত করা হচ্ছে
             </p>
 
-            <div className="mt-6 h-2 w-48 overflow-hidden rounded-full bg-green-100">
-                <div className="h-full w-1/2 animate-[loading_1.5s_ease-in-out_infinite] rounded-full bg-[#05893E]" />
+            {/* Loading Dots */}
+            <div className="mt-6 flex items-center gap-2">
+                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-[#05893E] [animation-delay:0ms]"></span>
+                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-[#05893E] [animation-delay:150ms]"></span>
+                <span className="h-2.5 w-2.5 animate-bounce rounded-full bg-[#05893E] [animation-delay:300ms]"></span>
             </div>
 
-            <style>{`
-                @keyframes loading {
-                    0% { transform: translateX(-100%); }
-                    100% { transform: translateX(200%); }
-                }
-            `}</style>
+            <p className="mt-4 text-xs font-medium text-gray-400">
+                একটু অপেক্ষা করুন...
+            </p>
+
         </div>
+
     );
 };
 
